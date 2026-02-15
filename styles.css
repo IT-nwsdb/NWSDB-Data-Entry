@@ -1,0 +1,56 @@
+/* Simple spreadsheet-like feel */
+:root{
+  --cell-min-width: 140px;
+}
+
+#dataTable thead th{
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.group-header{
+  font-weight: 600;
+}
+
+#dataTable td, #dataTable th{
+  padding: .5rem .6rem;
+}
+
+.cell-input{
+  width: 100%;
+  min-width: var(--cell-min-width);
+}
+
+.cell-textarea{
+  width: 100%;
+  min-width: 260px;
+  min-height: 44px;
+  resize: vertical;
+}
+
+.numeric{
+  text-align: right;
+}
+
+.table-responsive{
+  max-height: calc(100vh - 260px);
+}
+
+.rounded-4{
+  border-radius: 1rem !important;
+}
+/* Compact "No" column (2nd column after Delete) */
+#dataTable th:nth-child(2),
+#dataTable td:nth-child(2){
+  width: 72px;
+  min-width: 72px;
+  max-width: 90px;
+  white-space: nowrap;
+}
+
+#dataTable td:nth-child(2) .cell-input{
+  width: 72px;
+  min-width: 72px;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
